@@ -15,9 +15,12 @@ export function usePostActions() {
 
     try {
       const newPost = await createOrUpdatePost(data);
-      // store에서 현재 posts를 가져와서 추가
-      const currentPosts = useDashboardStore.getState().posts;
-      useDashboardStore.getState().setPosts([...currentPosts, newPost]);
+      const { posts } = useDashboardStore.getState();
+
+      // 이미 생성된 포스트가 없으면 추가 (API에서 이미 추가됨)
+      if (!posts.find(p => p.id === newPost.id)) {
+        useDashboardStore.getState().setPosts([...posts, newPost]);
+      }
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : '포스트 작성에 실패했습니다';
       setError(errorMessage);

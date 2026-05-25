@@ -19,7 +19,7 @@ export function usePosts() {
     };
 
     loadData();
-  }, [setPosts, setLoading, setError]);
+  }, []);
 
   return { posts, loading, error };
 }

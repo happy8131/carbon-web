@@ -19,7 +19,7 @@ export function useCompanies() {
     };
 
     loadData();
-  }, [setCompanies, setLoading, setError]);
+  }, []);
 
   return { companies, loading, error };
 }
