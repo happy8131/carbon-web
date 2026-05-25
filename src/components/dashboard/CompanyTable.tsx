@@ -151,73 +151,110 @@ export default function CompanyTable({ filteredCompanies }: CompanyTableProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-      <table className="w-full">
-        <thead className="bg-gray-50 border-b border-gray-200">
-          <tr>
-            <th className="px-6 py-3 text-left">
-              <button
-                onClick={() => handleSort('name')}
-                className="flex items-center gap-2 font-semibold text-gray-900 hover:text-gray-700"
+    <>
+      {/* 모바일 카드 레이아웃 */}
+      <div className="md:hidden space-y-3">
+        {sortedData.map((company) => (
+          <div
+            key={company.id}
+            className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+          >
+            <div className="flex justify-between items-start mb-3">
+              <div>
+                <h3 className="font-semibold text-gray-900">{company.name}</h3>
+                <p className="text-sm text-gray-500">{getCountryName(company.country)}</p>
+              </div>
+              <span
+                className={`text-sm font-semibold ${
+                  company.changePercent >= 0
+                    ? 'text-red-600'
+                    : 'text-green-600'
+                }`}
               >
-                회사명 <SortIcon column="name" />
-              </button>
-            </th>
-            <th className="px-6 py-3 text-left">
-              <button
-                onClick={() => handleSort('country')}
-                className="flex items-center gap-2 font-semibold text-gray-900 hover:text-gray-700"
-              >
-                국가 <SortIcon column="country" />
-              </button>
-            </th>
-            <th className="px-6 py-3 text-right">
-              <button
-                onClick={() => handleSort('emissions')}
-                className="flex items-center justify-end gap-2 font-semibold text-gray-900 hover:text-gray-700 w-full"
-              >
-                최근 월 배출량 (톤) <SortIcon column="emissions" />
-              </button>
-            </th>
-            <th className="px-6 py-3 text-right">
-              <button
-                onClick={() => handleSort('change')}
-                className="flex items-center justify-end gap-2 font-semibold text-gray-900 hover:text-gray-700 w-full"
-              >
-                변화율 (%) <SortIcon column="change" />
-              </button>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedData.map((company, idx) => (
-            <tr
-              key={company.id}
-              className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
-            >
-              <td className="px-6 py-4 text-sm font-medium text-gray-900">{company.name}</td>
-              <td className="px-6 py-4 text-sm text-gray-600">{getCountryName(company.country)}</td>
-              <td className="px-6 py-4 text-sm text-right text-gray-900 font-semibold">
+                {company.changePercent >= 0 ? '▲' : '▼'} {Math.abs(company.changePercent).toFixed(2)}%
+              </span>
+            </div>
+            <div className="pt-3 border-t border-gray-100">
+              <p className="text-sm text-gray-600 mb-1">최근 월 배출량</p>
+              <p className="text-lg font-semibold text-gray-900">
                 {company.latestEmissions.toLocaleString('ko-KR', {
                   maximumFractionDigits: 2,
-                })}
-              </td>
-              <td className="px-6 py-4 text-sm text-right">
-                <span
-                  className={`font-semibold ${
-                    company.changePercent >= 0
-                      ? 'text-red-600'
-                      : 'text-green-600'
-                  }`}
+                })} 톤
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 데스크톱 테이블 레이아웃 */}
+      <div className="hidden md:block bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <table className="w-full">
+          <thead className="bg-gray-50 border-b border-gray-200">
+            <tr>
+              <th className="px-6 py-3 text-left">
+                <button
+                  onClick={() => handleSort('name')}
+                  className="flex items-center gap-2 font-semibold text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-0 rounded px-1"
                 >
-                  {company.changePercent >= 0 ? '▲' : '▼'}{' '}
-                  {Math.abs(company.changePercent).toFixed(2)}%
-                </span>
-              </td>
+                  회사명 <SortIcon column="name" />
+                </button>
+              </th>
+              <th className="px-6 py-3 text-left">
+                <button
+                  onClick={() => handleSort('country')}
+                  className="flex items-center gap-2 font-semibold text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-0 rounded px-1"
+                >
+                  국가 <SortIcon column="country" />
+                </button>
+              </th>
+              <th className="px-6 py-3 text-right">
+                <button
+                  onClick={() => handleSort('emissions')}
+                  className="flex items-center justify-end gap-2 font-semibold text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-0 rounded px-1 w-full"
+                >
+                  최근 월 배출량 (톤) <SortIcon column="emissions" />
+                </button>
+              </th>
+              <th className="px-6 py-3 text-right">
+                <button
+                  onClick={() => handleSort('change')}
+                  className="flex items-center justify-end gap-2 font-semibold text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-0 rounded px-1 w-full"
+                >
+                  변화율 (%) <SortIcon column="change" />
+                </button>
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {sortedData.map((company) => (
+              <tr
+                key={company.id}
+                className="hover:bg-gray-50 transition-colors"
+              >
+                <td className="px-6 py-4 text-sm font-medium text-gray-900">{company.name}</td>
+                <td className="px-6 py-4 text-sm text-gray-600">{getCountryName(company.country)}</td>
+                <td className="px-6 py-4 text-sm text-right text-gray-900 font-semibold">
+                  {company.latestEmissions.toLocaleString('ko-KR', {
+                    maximumFractionDigits: 2,
+                  })}
+                </td>
+                <td className="px-6 py-4 text-sm text-right">
+                  <span
+                    className={`font-semibold ${
+                      company.changePercent >= 0
+                        ? 'text-red-600'
+                        : 'text-green-600'
+                    }`}
+                  >
+                    {company.changePercent >= 0 ? '▲' : '▼'}{' '}
+                    {Math.abs(company.changePercent).toFixed(2)}%
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
