@@ -26,11 +26,12 @@ export function calculateChange(current: number, previous: number): number {
 export function groupEmissionsBySource(
   emissions: GhgEmission[]
 ): Record<EmissionSource, number> {
-  return emissions.reduce(
+  const result = emissions.reduce(
     (acc, e) => {
       acc[e.source] = (acc[e.source] ?? 0) + e.emissions;
       return acc;
     },
-    {} as Record<EmissionSource, number>
+    { gasoline: 0, lpg: 0, diesel: 0 } as Record<EmissionSource, number>
   );
+  return result;
 }

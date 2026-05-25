@@ -1,0 +1,70 @@
+- generic [ref=e2]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - heading "🌍 CarbonTrack" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Carbon Management
+    - navigation [ref=e8]:
+      - link "Dashboard" [ref=e9] [cursor=pointer]:
+        - /url: /
+    - generic [ref=e10]:
+      - heading "Select Companies" [level=2] [ref=e11]
+      - generic [ref=e12]: 로딩 중...
+    - generic [ref=e13]:
+      - heading "Date Range" [level=2] [ref=e14]
+      - combobox [ref=e15]:
+        - option "Last 3 months"
+        - option "Last 6 months"
+        - option "Last 12 months" [selected]
+  - generic [ref=e16]:
+    - banner [ref=e17]:
+      - heading "Carbon Emissions Dashboard" [level=1] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: All Companies
+          - generic [ref=e23]: 2024-01 ~ 2024-12
+        - button "새로고침" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - paragraph [ref=e31]: 총 탄소 배출량
+            - generic [ref=e32]:
+              - paragraph [ref=e33]: "0"
+              - paragraph [ref=e34]: tons
+            - generic [ref=e35]:
+              - generic [ref=e36]: ▲
+              - generic [ref=e37]: 0.00%
+              - generic [ref=e38]: 증가
+          - generic [ref=e39]:
+            - paragraph [ref=e40]: 가솔린 배출량
+            - generic [ref=e41]:
+              - paragraph [ref=e42]: "0"
+              - paragraph [ref=e43]: tons
+            - generic [ref=e44]:
+              - generic [ref=e45]: ▲
+              - generic [ref=e46]: 0.00%
+              - generic [ref=e47]: 증가
+          - generic [ref=e48]:
+            - paragraph [ref=e49]: LPG 배출량
+            - generic [ref=e50]:
+              - paragraph [ref=e51]: "0"
+              - paragraph [ref=e52]: tons
+            - generic [ref=e53]:
+              - generic [ref=e54]: ▲
+              - generic [ref=e55]: 0.00%
+              - generic [ref=e56]: 증가
+          - generic [ref=e57]:
+            - paragraph [ref=e58]: 디젤 배출량
+            - generic [ref=e59]:
+              - paragraph [ref=e60]: "0"
+              - paragraph [ref=e61]: tons
+            - generic [ref=e62]:
+              - generic [ref=e63]: ▲
+              - generic [ref=e64]: 0.00%
+              - generic [ref=e65]: 증가
+        - generic [ref=e66]:
+          - paragraph [ref=e68]: 배출 데이터가 없습니다
+          - paragraph [ref=e70]: 배출 데이터가 없습니다
+        - paragraph [ref=e72]: 배출 데이터가 없습니다
+        - paragraph [ref=e74]: 회사 데이터가 없습니다

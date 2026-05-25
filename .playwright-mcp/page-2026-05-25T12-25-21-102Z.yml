@@ -1,0 +1,97 @@
+- generic [ref=e2]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - heading "🌍 CarbonTrack" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Carbon Management
+    - navigation [ref=e8]:
+      - link "Dashboard" [ref=e9] [cursor=pointer]:
+        - /url: /
+    - generic [ref=e10]:
+      - heading "Select Companies" [level=2] [ref=e11]
+      - generic [ref=e12]: 로딩 중...
+    - generic [ref=e13]:
+      - heading "Date Range" [level=2] [ref=e14]
+      - combobox [ref=e15]:
+        - option "Last 3 months"
+        - option "Last 6 months"
+        - option "Last 12 months" [selected]
+  - generic [ref=e16]:
+    - banner [ref=e17]:
+      - heading "Carbon Emissions Dashboard" [level=1] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: All Companies
+          - generic [ref=e23]: 2024-01 ~ 2024-12
+        - button "새로고침" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - complementary [ref=e30]:
+          - generic [ref=e31]:
+            - heading "🌍 CarbonTrack" [level=1] [ref=e32]
+            - paragraph [ref=e33]: Carbon Management
+          - navigation [ref=e34]:
+            - link "Dashboard" [ref=e35] [cursor=pointer]:
+              - /url: /
+          - generic [ref=e36]:
+            - heading "Select Companies" [level=2] [ref=e37]
+            - generic [ref=e38]: 로딩 중...
+          - generic [ref=e39]:
+            - heading "Date Range" [level=2] [ref=e40]
+            - combobox [ref=e41]:
+              - option "Last 3 months"
+              - option "Last 6 months"
+              - option "Last 12 months" [selected]
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - heading "Carbon Emissions Dashboard" [level=1] [ref=e45]
+            - generic [ref=e46]:
+              - generic [ref=e47]:
+                - generic [ref=e48]: All Companies
+                - generic [ref=e49]: 2024-01 ~ 2024-12
+              - button "새로고침" [ref=e50] [cursor=pointer]:
+                - img [ref=e51]
+          - main [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - generic [ref=e56]:
+                  - paragraph [ref=e57]: 총 탄소 배출량
+                  - generic [ref=e58]:
+                    - paragraph [ref=e59]: "0"
+                    - paragraph [ref=e60]: tons
+                  - generic [ref=e61]:
+                    - generic [ref=e62]: ▲
+                    - generic [ref=e63]: 0.00%
+                    - generic [ref=e64]: 증가
+                - generic [ref=e65]:
+                  - paragraph [ref=e66]: 가솔린 배출량
+                  - generic [ref=e67]:
+                    - paragraph [ref=e68]: "0"
+                    - paragraph [ref=e69]: tons
+                  - generic [ref=e70]:
+                    - generic [ref=e71]: ▲
+                    - generic [ref=e72]: 0.00%
+                    - generic [ref=e73]: 증가
+                - generic [ref=e74]:
+                  - paragraph [ref=e75]: LPG 배출량
+                  - generic [ref=e76]:
+                    - paragraph [ref=e77]: "0"
+                    - paragraph [ref=e78]: tons
+                  - generic [ref=e79]:
+                    - generic [ref=e80]: ▲
+                    - generic [ref=e81]: 0.00%
+                    - generic [ref=e82]: 증가
+                - generic [ref=e83]:
+                  - paragraph [ref=e84]: 디젤 배출량
+                  - generic [ref=e85]:
+                    - paragraph [ref=e86]: "0"
+                    - paragraph [ref=e87]: tons
+                  - generic [ref=e88]:
+                    - generic [ref=e89]: ▲
+                    - generic [ref=e90]: 0.00%
+                    - generic [ref=e91]: 증가
+              - generic [ref=e92]:
+                - paragraph [ref=e94]: 배출 데이터가 없습니다
+                - paragraph [ref=e96]: 배출 데이터가 없습니다
+              - paragraph [ref=e98]: 배출 데이터가 없습니다
+              - paragraph [ref=e100]: 회사 데이터가 없습니다

@@ -10,17 +10,31 @@ export default function Sidebar() {
 
   const handleSelectAllCompanies = (checked: boolean) => {
     if (checked) {
+      // 모든 회사 선택
       setSelectedCompanies(companies.map(c => c.id));
     } else {
+      // 모든 회사 선택 해제 (빈 배열은 "모두 보여주기"를 의미하므로 제거하지 않음)
+      // 대신 첫 번째 회사만 선택하는 방식 또는 빈 배열로 유지
+      // UI상 일관성을 위해 비워두기
       setSelectedCompanies([]);
     }
   };
 
   const handleSelectCompany = (id: string, checked: boolean) => {
+    // selectedCompanies가 빈 배열이면 모든 회사가 선택된 상태
+    // 이 경우 먼저 모든 회사 ID를 추가한 다음 처리
+    const currentSelected = selectedCompanies.length === 0
+      ? companies.map(c => c.id)
+      : selectedCompanies;
+
     if (checked) {
-      setSelectedCompanies([...selectedCompanies, id]);
+      // 이미 있는지 확인 후 추가
+      if (!currentSelected.includes(id)) {
+        setSelectedCompanies([...currentSelected, id]);
+      }
     } else {
-      setSelectedCompanies(selectedCompanies.filter(cid => cid !== id));
+      // 선택 해제
+      setSelectedCompanies(currentSelected.filter(cid => cid !== id));
     }
   };
 

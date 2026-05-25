@@ -1,0 +1,31 @@
+
+> carbon-web@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3001
+
+ ✓ Starting...
+   Using tsconfig file: ./tsconfig.json
+[Error: EPERM: operation not permitted, open 'C:\Users\user\workspaces\courses\carbon-web\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\user\\workspaces\\courses\\carbon-web\\.next\\trace'
+}
+ ✓ Ready in 2.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 7s (1586 modules)
+ GET / 200 in 8979ms
+ ✓ Compiled in 2.2s (778 modules)
+ ✓ Compiled in 385ms (764 modules)
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 4.2s (822 modules)
+ GET /favicon.ico 200 in 4354ms
+ GET / 200 in 451ms
+ ✓ Compiled in 896ms (1568 modules)
+ ✓ Compiled in 367ms (1568 modules)
+ ✓ Compiled in 342ms (1568 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\user\workspaces\courses\carbon-web\.next\cache\webpack\server-development\2.pack.gz_' -> 'C:\Users\user\workspaces\courses\carbon-web\.next\cache\webpack\server-development\2.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\user\workspaces\courses\carbon-web\.next\cache\webpack\client-development\2.pack.gz_' -> 'C:\Users\user\workspaces\courses\carbon-web\.next\cache\webpack\client-development\2.pack.gz'
