@@ -1,0 +1,206 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - heading "🌍 CarbonTrack" [level=1] [ref=e6]
+        - paragraph [ref=e7]: Carbon Management
+      - navigation [ref=e8]:
+        - link "Dashboard" [ref=e9] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e10]:
+        - heading "Select Companies" [level=2] [ref=e11]
+        - generic [ref=e12]:
+          - generic [ref=e90] [cursor=pointer]:
+            - checkbox "All" [ref=e91]
+            - generic [ref=e92]: All
+          - generic [ref=e93] [cursor=pointer]:
+            - checkbox "Acme Corp" [active] [ref=e94]
+            - generic [ref=e95]: Acme Corp
+          - generic [ref=e96] [cursor=pointer]:
+            - checkbox "Globex Industries" [checked] [ref=e97]
+            - generic [ref=e98]: Globex Industries
+          - generic [ref=e99] [cursor=pointer]:
+            - checkbox "TechCorp Asia" [checked] [ref=e100]
+            - generic [ref=e101]: TechCorp Asia
+          - generic [ref=e102] [cursor=pointer]:
+            - checkbox "Green Energy Co" [checked] [ref=e103]
+            - generic [ref=e104]: Green Energy Co
+      - generic [ref=e13]:
+        - heading "Date Range" [level=2] [ref=e14]
+        - combobox [ref=e15]:
+          - option "Last 3 months"
+          - option "Last 6 months"
+          - option "Last 12 months" [selected]
+    - generic [ref=e16]:
+      - banner [ref=e17]:
+        - heading "Carbon Emissions Dashboard" [level=1] [ref=e19]
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]: 3 Company(ies)
+            - generic [ref=e23]: 2024-01 ~ 2024-12
+          - button "새로고침" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+      - main [ref=e27]:
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - paragraph [ref=e108]: 총 탄소 배출량
+              - generic [ref=e109]:
+                - paragraph [ref=e110]: 3,413
+                - paragraph [ref=e111]: tons
+              - generic [ref=e112]:
+                - generic [ref=e113]: ▲
+                - generic [ref=e114]: 1150.18%
+                - generic [ref=e115]: 증가
+            - generic [ref=e116]:
+              - paragraph [ref=e117]: 가솔린 배출량
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: 1,188
+                - paragraph [ref=e120]: tons
+              - generic [ref=e121]:
+                - generic [ref=e122]: ▲
+                - generic [ref=e123]: 0.00%
+                - generic [ref=e124]: 증가
+            - generic [ref=e125]:
+              - paragraph [ref=e126]: LPG 배출량
+              - generic [ref=e127]:
+                - paragraph [ref=e128]: "882"
+                - paragraph [ref=e129]: tons
+              - generic [ref=e130]:
+                - generic [ref=e131]: ▲
+                - generic [ref=e132]: 376.76%
+                - generic [ref=e133]: 증가
+            - generic [ref=e134]:
+              - paragraph [ref=e135]: 디젤 배출량
+              - generic [ref=e136]:
+                - paragraph [ref=e137]: 1,343
+                - paragraph [ref=e138]: tons
+              - generic [ref=e139]:
+                - generic [ref=e140]: ▲
+                - generic [ref=e141]: 1426.14%
+                - generic [ref=e142]: 증가
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - heading "월별 탄소 배출량 추이" [level=2] [ref=e145]
+              - generic [ref=e147]:
+                - list [ref=e149]:
+                  - listitem [ref=e150]:
+                    - img "Globex Industries legend icon" [ref=e594]
+                    - text: Globex Industries
+                  - listitem [ref=e153]:
+                    - img "Green Energy Co legend icon" [ref=e595]
+                    - text: Green Energy Co
+                  - listitem [ref=e156]:
+                    - img "TechCorp Asia legend icon" [ref=e596]
+                    - text: TechCorp Asia
+                - application [ref=e162]:
+                  - generic [ref=e187]:
+                    - generic [ref=e188]:
+                      - generic [ref=e190]: Jan
+                      - generic [ref=e192]: Feb
+                      - generic [ref=e194]: Mar
+                      - generic [ref=e196]: Apr
+                      - generic [ref=e198]: May
+                      - generic [ref=e200]: Jun
+                      - generic [ref=e202]: Jul
+                      - generic [ref=e204]: Aug
+                      - generic [ref=e206]: Sep
+                      - generic [ref=e208]: Oct
+                      - generic [ref=e210]: Nov
+                      - generic [ref=e212]: Dec
+                    - generic [ref=e213]:
+                      - generic [ref=e604]: "0"
+                      - generic [ref=e606]: "40"
+                      - generic [ref=e608]: "80"
+                      - generic [ref=e610]: "120"
+                      - generic [ref=e223]: "160"
+                    - generic [ref=e224]: 배출량 (톤)
+            - generic [ref=e225]:
+              - heading "배출원별 구성비" [level=2] [ref=e226]
+              - generic [ref=e228]:
+                - list [ref=e230]:
+                  - listitem [ref=e231]:
+                    - img "Diesel (디젤) legend icon" [ref=e232]
+                    - text: Diesel (디젤)
+                  - listitem [ref=e234]:
+                    - img "Gasoline (가솔린) legend icon" [ref=e235]
+                    - text: Gasoline (가솔린)
+                  - listitem [ref=e237]:
+                    - img "LPG legend icon" [ref=e238]
+                    - text: LPG
+                - application [ref=e240]
+          - generic [ref=e253]:
+            - heading "회사별 배출량 추이" [level=2] [ref=e254]
+            - generic [ref=e256]:
+              - list [ref=e258]:
+                - listitem [ref=e259]:
+                  - img "Globex Industries legend icon" [ref=e621]
+                  - text: Globex Industries
+                - listitem [ref=e262]:
+                  - img "Green Energy Co legend icon" [ref=e622]
+                  - text: Green Energy Co
+                - listitem [ref=e265]:
+                  - img "TechCorp Asia legend icon" [ref=e623]
+                  - text: TechCorp Asia
+              - application [ref=e271]:
+                - generic [ref=e300]:
+                  - generic [ref=e301]:
+                    - generic [ref=e303]: Jan
+                    - generic [ref=e305]: Feb
+                    - generic [ref=e307]: Mar
+                    - generic [ref=e309]: Apr
+                    - generic [ref=e311]: May
+                    - generic [ref=e313]: Jun
+                    - generic [ref=e315]: Jul
+                    - generic [ref=e317]: Aug
+                    - generic [ref=e319]: Sep
+                    - generic [ref=e321]: Oct
+                    - generic [ref=e323]: Nov
+                    - generic [ref=e325]: Dec
+                  - generic [ref=e326]:
+                    - generic [ref=e634]: "0"
+                    - generic [ref=e636]: "85"
+                    - generic [ref=e638]: "170"
+                    - generic [ref=e640]: "255"
+                    - generic [ref=e642]: "340"
+                  - generic [ref=e337]: 배출량 (톤)
+          - table [ref=e339]:
+            - rowgroup [ref=e340]:
+              - row "회사명 ⇅ 국가 ⇅ 최근 월 배출량 (톤) ▼ 변화율 (%) ⇅" [ref=e341]:
+                - columnheader "회사명 ⇅" [ref=e342]:
+                  - button "회사명 ⇅" [ref=e343] [cursor=pointer]:
+                    - text: 회사명
+                    - generic [ref=e643]: ⇅
+                - columnheader "국가 ⇅" [ref=e345]:
+                  - button "국가 ⇅" [ref=e346] [cursor=pointer]:
+                    - text: 국가
+                    - generic [ref=e644]: ⇅
+                - columnheader "최근 월 배출량 (톤) ▼" [ref=e348]:
+                  - button "최근 월 배출량 (톤) ▼" [ref=e349] [cursor=pointer]:
+                    - text: 최근 월 배출량 (톤)
+                    - generic [ref=e645]: ▼
+                - columnheader "변화율 (%) ⇅" [ref=e351]:
+                  - button "변화율 (%) ⇅" [ref=e352] [cursor=pointer]:
+                    - text: 변화율 (%)
+                    - generic [ref=e646]: ⇅
+            - rowgroup [ref=e354]:
+              - row "Globex Industries 독일 155 ▲ 29.17%" [ref=e355]:
+                - cell "Globex Industries" [ref=e356]
+                - cell "독일" [ref=e357]
+                - cell "155" [ref=e358]
+                - cell "▲ 29.17%" [ref=e359]:
+                  - generic [ref=e360]: ▲ 29.17%
+              - row "TechCorp Asia 일본 95 ▲ 7.95%" [ref=e367]:
+                - cell "TechCorp Asia" [ref=e368]
+                - cell "일본" [ref=e369]
+                - cell "95" [ref=e370]
+                - cell "▲ 7.95%" [ref=e371]:
+                  - generic [ref=e372]: ▲ 7.95%
+              - row "Green Energy Co 한국 80 ▲ 23.08%" [ref=e373]:
+                - cell "Green Energy Co" [ref=e374]
+                - cell "한국" [ref=e375]
+                - cell "80" [ref=e376]
+                - cell "▲ 23.08%" [ref=e377]:
+                  - generic [ref=e378]: ▲ 23.08%
+  - alert [ref=e89]
+  - generic [ref=e379]: "340"
