@@ -35,20 +35,20 @@ export default function Sidebar() {
   const isAllCompaniesSelected = selectedCompanies.length === 0 || selectedCompanies.length === companies.length;
 
   return (
-    <aside className="w-64 bg-gray-50 border-r border-gray-200 flex flex-col h-screen overflow-y-auto">
+    <aside className="w-64 bg-gray-50 border-r border-gray-100 flex flex-col h-screen overflow-y-auto">
       {/* 로고 */}
-      <div className="px-6 py-5 border-b border-gray-200 flex-shrink-0">
-        <h1 className="text-xl font-bold text-gray-800">🌍 CarbonTrack</h1>
-        <p className="text-xs text-gray-500 mt-1">탄소 배출 관리</p>
+      <div className="px-6 py-6 border-b border-gray-100 flex-shrink-0">
+        <h1 className="text-lg font-bold text-gray-800">🌍 CarbonTrack</h1>
+        <p className="text-xs text-gray-500 mt-1.5 font-medium">Carbon Management</p>
       </div>
 
       {/* 네비게이션 */}
-      <nav className="px-4 py-4 border-b border-gray-200 flex-shrink-0">
+      <nav className="px-4 py-5 border-b border-gray-100 flex-shrink-0">
         <Link
           href="/"
-          className={`block px-4 py-2 rounded-lg transition-colors ${
+          className={`block px-3 py-2.5 rounded-lg transition-colors text-sm font-medium ${
             pathname === '/'
-              ? 'bg-blue-100 text-blue-700 font-semibold'
+              ? 'bg-blue-100 text-blue-700'
               : 'text-gray-700 hover:bg-gray-100'
           }`}
         >
@@ -57,15 +57,15 @@ export default function Sidebar() {
       </nav>
 
       {/* 회사 필터 */}
-      <section className="px-6 py-4 border-b border-gray-200 flex-shrink-0">
-        <h2 className="text-sm font-semibold text-gray-800 mb-3 uppercase tracking-wide">Select Companies</h2>
+      <section className="px-6 py-5 border-b border-gray-100 flex-shrink-0">
+        <h2 className="text-xs font-semibold text-gray-700 mb-3.5 uppercase tracking-widest">Select Companies</h2>
 
         {companies.length === 0 ? (
-          <div className="text-sm text-gray-500 italic">로딩 중...</div>
+          <div className="text-xs text-gray-500">로딩 중...</div>
         ) : (
           <div className="space-y-2">
             {/* All 체크박스 */}
-            <label className="flex items-center gap-2 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors">
+            <label className="flex items-center gap-2.5 cursor-pointer hover:bg-gray-100 px-2 py-1.5 rounded-md transition-colors">
               <input
                 type="checkbox"
                 checked={isAllCompaniesSelected}
@@ -79,7 +79,7 @@ export default function Sidebar() {
             {companies.map((company) => (
               <label
                 key={company.id}
-                className="flex items-center gap-2 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors"
+                className="flex items-center gap-2.5 cursor-pointer hover:bg-gray-100 px-2 py-1.5 rounded-md transition-colors"
               >
                 <input
                   type="checkbox"
@@ -95,8 +95,8 @@ export default function Sidebar() {
       </section>
 
       {/* 날짜 범위 필터 */}
-      <section className="px-6 py-4 flex-shrink-0">
-        <h2 className="text-sm font-semibold text-gray-800 mb-3 uppercase tracking-wide">Date Range</h2>
+      <section className="px-6 py-5 flex-shrink-0">
+        <h2 className="text-xs font-semibold text-gray-700 mb-3.5 uppercase tracking-widest">Date Range</h2>
 
         <select
           value={
