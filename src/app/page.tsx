@@ -24,9 +24,11 @@ export default function Dashboard() {
   const { filteredCompanies } = useFilters();
   const { companies, selectedCompanies, dateRange } = useStore();
   const { posts } = usePosts();
-  const { createPost, deletePost, loading: postActionLoading, error: postActionError } = usePostActions();
+  const { createPost, deletePost, loading: postActionLoading } = usePostActions();
   const [isPostFormOpen, setIsPostFormOpen] = useState(false);
   const [deletingPostIds, setDeletingPostIds] = useState<string[]>([]);
+  const [postFormError, setPostFormError] = useState<string | null>(null);
+  const [postFormSuccess, setPostFormSuccess] = useState(false);
 
   const filteredPosts = useMemo(() => {
     return posts.filter(post => {
@@ -46,11 +48,21 @@ export default function Dashboard() {
 
   // 포스트 작성 핸들러
   const handleCreatePost = async (data: PostFormData) => {
+    setPostFormError(null);
+    setPostFormSuccess(false);
     try {
       await createPost(data);
-      setIsPostFormOpen(false);
-    } catch {
-      // 에러는 usePostActions에서 처리됨
+      setPostFormError(null);
+      setPostFormSuccess(true);
+      // 성공 메시지 표시 후 모달 닫기
+      setTimeout(() => {
+        setIsPostFormOpen(false);
+        setPostFormSuccess(false);
+      }, 1500);
+    } catch (err) {
+      const errMsg = err instanceof Error ? err.message : '포스트 작성에 실패했습니다';
+      setPostFormError(errMsg);
+      setPostFormSuccess(false);
     }
   };
 
@@ -175,16 +187,23 @@ export default function Dashboard() {
 
     {/* 포스트 작성 모달 */}
     <Modal isOpen={isPostFormOpen} onClose={() => setIsPostFormOpen(false)} title="New Post">
-      <PostForm
-        companies={companies}
-        onSubmit={handleCreatePost}
-        onCancel={() => setIsPostFormOpen(false)}
-        isLoading={postActionLoading}
-      />
-      {postActionError && (
-        <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded text-sm">
-          {postActionError}
+      {postFormSuccess && (
+        <div className="mb-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded text-sm">
+          포스트가 성공적으로 생성되었습니다! 🎉
         </div>
+      )}
+      {postFormError && (
+        <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded text-sm">
+          {postFormError}
+        </div>
+      )}
+      {!postFormSuccess && (
+        <PostForm
+          companies={companies}
+          onSubmit={handleCreatePost}
+          onCancel={() => setIsPostFormOpen(false)}
+          isLoading={postActionLoading}
+        />
       )}
     </Modal>
     </>
