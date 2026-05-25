@@ -43,7 +43,7 @@ export default function Sidebar() {
     const endMonth = 12;
     const startMonth = Math.max(1, endMonth - months + 1);
 
-    setDateRange(`2024-${String(startMonth).padStart(2, '0')}`, `2024-${String(endMonth).padStart(2, '0')}`);
+    setDateRange(`2026-${String(startMonth).padStart(2, '0')}`, `2026-${String(endMonth).padStart(2, '0')}`);
   };
 
   const isAllCompaniesSelected = selectedCompanies.length === 0 || selectedCompanies.length === companies.length;
@@ -114,11 +114,11 @@ export default function Sidebar() {
 
         <select
           value={
-            dateRange.start === '2024-01' && dateRange.end === '2024-12'
+            dateRange.start === '2026-01' && dateRange.end === '2026-12'
               ? '12'
-              : dateRange.start === '2024-07' && dateRange.end === '2024-12'
+              : dateRange.start === '2026-07' && dateRange.end === '2026-12'
                 ? '6'
-                : dateRange.start === '2024-10' && dateRange.end === '2024-12'
+                : dateRange.start === '2026-10' && dateRange.end === '2026-12'
                   ? '3'
                   : '12'
           }
