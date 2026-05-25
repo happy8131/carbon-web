@@ -1,4 +1,4 @@
-import { GhgEmission, EmissionSource } from './types';
+import { GhgEmission, EmissionSource, Post } from './types';
 
 // 배출량을 "X,XXX.XX tons" 형식으로 포맷
 export function formatEmissions(value: number): string {
@@ -34,4 +34,23 @@ export function groupEmissionsBySource(
     { gasoline: 0, lpg: 0, diesel: 0 } as Record<EmissionSource, number>
   );
   return result;
+}
+
+// 콘텐츠 미리보기 (지정된 길이로 자르기)
+export function truncateContent(content: string, maxLength: number = 100): string {
+  return content.length > maxLength ? content.slice(0, maxLength) + '...' : content;
+}
+
+// 날짜 범위로 포스트 필터링
+export function filterPostsByDateRange(
+  posts: Post[],
+  dateRange: { start: string; end: string }
+): Post[] {
+  return posts.filter(post => post.dateTime >= dateRange.start && post.dateTime <= dateRange.end);
+}
+
+// 회사 ID 목록으로 포스트 필터링
+export function filterPostsByCompanies(posts: Post[], companyIds: string[]): Post[] {
+  if (companyIds.length === 0) return posts;
+  return posts.filter(post => companyIds.includes(post.resourceUid));
 }

@@ -24,7 +24,7 @@ export const useDashboardStore = create<DashboardStore>()((set) => ({
   companies: [],
   posts: [],
   selectedCompanies: [],
-  dateRange: { start: '2024-01', end: '2024-12' },
+  dateRange: { start: '2026-01', end: '2026-12' },
   loading: false,
   error: null,
 

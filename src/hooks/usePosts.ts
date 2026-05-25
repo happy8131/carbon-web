@@ -10,7 +10,8 @@ export function usePosts() {
       setLoading(true);
       try {
         const data = await fetchPosts();
-        setPosts(data);
+        // API의 배열과 다른 참조로 저장 (API와 store 분리)
+        setPosts([...data]);
       } catch (err) {
         setError((err as Error).message);
       } finally {
@@ -19,7 +20,7 @@ export function usePosts() {
     };
 
     loadData();
-  }, [setPosts, setLoading, setError]);
+  }, []);
 
   return { posts, loading, error };
 }

@@ -10,7 +10,8 @@ export function useCompanies() {
       setLoading(true);
       try {
         const data = await fetchCompanies();
-        setCompanies(data);
+        // API의 배열과 다른 참조로 저장 (API와 store 분리)
+        setCompanies([...data]);
       } catch (err) {
         setError((err as Error).message);
       } finally {
@@ -19,7 +20,7 @@ export function useCompanies() {
     };
 
     loadData();
-  }, [setCompanies, setLoading, setError]);
+  }, []);
 
   return { companies, loading, error };
 }
