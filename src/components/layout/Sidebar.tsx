@@ -35,7 +35,7 @@ export default function Sidebar() {
   const isAllCompaniesSelected = selectedCompanies.length === 0 || selectedCompanies.length === companies.length;
 
   return (
-    <aside className="w-64 bg-gray-50 border-r border-gray-100 flex flex-col h-screen overflow-y-auto">
+    <aside className="w-full h-full bg-gray-50 border-r border-gray-100 flex flex-col overflow-y-auto">
       {/* 로고 */}
       <div className="px-6 py-6 border-b border-gray-100 flex-shrink-0">
         <h1 className="text-lg font-bold text-gray-800">🌍 CarbonTrack</h1>

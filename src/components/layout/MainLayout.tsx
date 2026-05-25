@@ -12,7 +12,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <>
       {/* 모바일 오버레이 */}
       {isSidebarOpen && (
         <div
@@ -22,23 +22,25 @@ export default function MainLayout({ children }: MainLayoutProps) {
         />
       )}
 
-      {/* 사이드바 */}
-      <div
-        className={`
-          fixed md:static z-30 h-full transition-transform duration-300
-          ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
-        `}
-      >
-        <Sidebar />
-      </div>
+      <div className="flex h-screen w-screen bg-gray-100">
+        {/* 사이드바 */}
+        <div
+          className={`
+            fixed md:relative z-30 h-screen w-64 transition-transform duration-300 md:translate-x-0
+            ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+          `}
+        >
+          <Sidebar />
+        </div>
 
-      {/* 메인 영역 */}
-      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-        <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
-        <main className="flex-1 overflow-auto p-6">
-          {children}
-        </main>
+        {/* 메인 영역 */}
+        <div className="flex-1 flex flex-col w-full overflow-hidden">
+          <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
+          <main className="flex-1 overflow-auto p-6">
+            {children}
+          </main>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
