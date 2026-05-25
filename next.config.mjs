@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  productionBrowserSourceMaps: false,
+  typescript: {
+    tsconfigPath: './tsconfig.json',
+  },
+};
 
 export default nextConfig;
