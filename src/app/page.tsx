@@ -11,7 +11,6 @@ import {
   LoadingScreen,
   ErrorScreen,
 } from '@/components/dashboard';
-import { MainLayout } from '@/components/layout';
 import { groupEmissionsBySource, calculateChange } from '@/lib/utils';
 
 export default function Dashboard() {
@@ -73,8 +72,7 @@ export default function Dashboard() {
   );
 
   return (
-    <MainLayout>
-      <div className="space-y-6">
+    <div className="space-y-6">
         {/* 1. 통계 카드 행 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard
@@ -123,6 +121,5 @@ export default function Dashboard() {
         {/* 4. 테이블 */}
         <CompanyTable filteredCompanies={filteredCompanies} />
       </div>
-    </MainLayout>
   );
 }

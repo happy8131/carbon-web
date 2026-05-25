@@ -82,9 +82,10 @@ export default function EmissionChart({ filteredCompanies }: EmissionChartProps)
               border: '1px solid #e5e7eb',
               borderRadius: '8px',
             }}
-            formatter={(value: number | undefined) => {
-              if (value === undefined) return '';
-              return [value.toFixed(2), ''];
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            formatter={(value: any) => {
+              const numValue = typeof value === 'number' ? value : 0;
+              return [numValue.toFixed(2), ''];
             }}
           />
           <Legend />

@@ -74,9 +74,10 @@ export default function SourceChart({ filteredCompanies }: SourceChartProps) {
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: number | undefined) => {
-              if (value === undefined) return '';
-              return [value.toFixed(2) + ' 톤', ''];
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            formatter={(value: any) => {
+              const numValue = typeof value === 'number' ? value : 0;
+              return [numValue.toFixed(2) + ' 톤', ''];
             }}
             contentStyle={{
               backgroundColor: '#ffffff',
