@@ -2,11 +2,6 @@
 
 **경영진과 관리자가 회사별 탄소 배출량을 모니터링하고 탄소세 계획을 세울 수 있는 웹 대시보드**
 
-![Phase](https://img.shields.io/badge/Phase-1--5%20Complete-brightgreen)
-![TypeScript](https://img.shields.io/badge/TypeScript-Strict%20Mode-blue)
-![Tests](https://img.shields.io/badge/ESLint-Passing-green)
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
-![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextjs)
 
 ---
 
@@ -310,28 +305,8 @@ npm run lint
 
 ### 🚀 Vercel 배포 (권장)
 
-```bash
-# 1. Vercel CLI 설치
-npm i -g vercel
 
-# 2. Vercel에 로그인
-vercel login
-
-# 3. 프로젝트 배포
-vercel
-
-# 4. GitHub 연동으로 자동 배포 설정
-# Vercel Dashboard → Settings → Git Integration
-```
-
-**Vercel의 장점:**
-- ✅ Next.js 공식 호스팅 플랫폼
-- ✅ 자동 성능 최적화
-- ✅ 무료 계획으로 충분
-- ✅ 자동 HTTPS
-- ✅ GitHub 연동으로 CI/CD 자동화
-
-### 🌐 대안: Netlify
+https://carbon-web-iota.vercel.app/
 
 ```bash
 # 빌드 명령어 설정 필요
@@ -407,15 +382,6 @@ MIT License - 자유로운 사용 및 수정 가능
 | 빌드 실패 | 메모리 증가: `NODE_OPTIONS="--max-old-space-size=4096" npm run build` |
 | 성능 문제 | Recharts 데이터 최소화, 불필요한 리렌더링 제거 |
 | 타입 에러 | `npm run lint` 실행하여 문제 정확히 파악 |
-
----
-
-## 궁금한 점?
-
-- 📖 [Next.js Documentation](https://nextjs.org/docs)
-- 📊 [Recharts API Reference](https://recharts.org/en-US/api)
-- 🎨 [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- 📦 [Zustand GitHub](https://github.com/pmndrs/zustand)
 
 ---
 
