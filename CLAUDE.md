@@ -194,11 +194,3 @@ const { companies, loading, error } = useStore();
 4. **에러 처리**: API 실패(15% 확률) 대비 - 낙관적 업데이트 고려
 5. **반응형 설계**: Tailwind breakpoints 활용 (md, lg)
 6. **성능**: 불필요한 리렌더링 방지 (React.memo, useCallback)
-
-## 평가 기준 (프로젝트 목표)
-
-- 창의성 & 비판적 사고 (25%)
-- UI/UX 디자인 (25%)
-- UI 엔지니어링 (20%)
-- 소프트웨어 엔지니어링 (20%)
-- 코드 품질 (10%)
