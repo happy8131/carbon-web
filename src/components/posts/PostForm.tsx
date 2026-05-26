@@ -74,7 +74,7 @@ export default function PostForm({
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="포스트 제목을 입력하세요"
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           disabled={isLoading}
         />
         {errors.title && <p className="text-red-500 text-xs mt-1">{errors.title}</p>}
@@ -89,7 +89,7 @@ export default function PostForm({
           id="company"
           value={resourceUid}
           onChange={(e) => setResourceUid(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           disabled={isLoading}
         >
           <option value="">회사를 선택하세요</option>
@@ -112,7 +112,7 @@ export default function PostForm({
           type="month"
           value={dateTime}
           onChange={(e) => setDateTime(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           disabled={isLoading}
         />
         {errors.dateTime && <p className="text-red-500 text-xs mt-1">{errors.dateTime}</p>}
@@ -129,7 +129,7 @@ export default function PostForm({
           onChange={(e) => setContent(e.target.value)}
           placeholder="포스트 내용을 입력하세요"
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
           disabled={isLoading}
         />
         {errors.content && <p className="text-red-500 text-xs mt-1">{errors.content}</p>}
@@ -140,7 +140,7 @@ export default function PostForm({
         <button
           type="submit"
           disabled={isLoading}
-          className="flex-1 px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+          className="flex-1 px-4 py-2 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
         >
           {isLoading ? '작성 중...' : '작성'}
         </button>
