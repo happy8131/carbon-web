@@ -2,40 +2,40 @@
 
 export function SkeletonCard() {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-pulse">
-      <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
-      <div className="h-8 bg-gray-200 rounded w-3/4 mb-4"></div>
-      <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+      <div className="h-4 skeleton rounded w-1/2 mb-4"></div>
+      <div className="h-8 skeleton rounded w-3/4 mb-4"></div>
+      <div className="h-4 skeleton rounded w-1/3"></div>
     </div>
   );
 }
 
 export function SkeletonChart() {
   return (
-    <div className="bg-white p-6 rounded-lg border border-gray-200 animate-pulse">
-      <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
-      <div className="h-64 bg-gray-200 rounded"></div>
+    <div className="bg-white p-6 rounded-lg border border-gray-200">
+      <div className="h-6 skeleton rounded w-1/3 mb-4"></div>
+      <div className="h-64 skeleton rounded"></div>
     </div>
   );
 }
 
 export function SkeletonTable() {
   return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden animate-pulse">
-      <div className="bg-gray-100 p-6 border-b border-gray-200">
+    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+      <div className="bg-gray-50 p-6 border-b border-gray-200">
         <div className="flex gap-4">
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
         </div>
       </div>
       {Array.from({ length: 5 }).map((_, idx) => (
         <div key={idx} className="p-6 border-b border-gray-200 flex gap-4">
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
+          <div className="h-4 skeleton rounded w-1/4"></div>
         </div>
       ))}
     </div>

@@ -66,7 +66,7 @@ export default function Sidebar() {
           href="/"
           className={`block px-3 py-2.5 rounded-lg transition-colors text-sm font-medium ${
             pathname === '/'
-              ? 'bg-blue-100 text-blue-700'
+              ? 'bg-primary-100 text-primary-700'
               : 'text-gray-700 hover:bg-gray-100'
           }`}
         >
@@ -88,7 +88,7 @@ export default function Sidebar() {
                 type="checkbox"
                 checked={isAllCompaniesSelected}
                 onChange={(e) => handleSelectAllCompanies(e.target.checked)}
-                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                className="w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
               />
               <span className="text-sm font-medium text-gray-700">All</span>
             </label>
@@ -103,7 +103,7 @@ export default function Sidebar() {
                   type="checkbox"
                   checked={selectedCompanies.length === 0 || selectedCompanies.includes(company.id)}
                   onChange={(e) => handleSelectCompany(company.id, e.target.checked)}
-                  className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  className="w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                 />
                 <span className="text-sm text-gray-700">{company.name}</span>
               </label>
@@ -127,7 +127,7 @@ export default function Sidebar() {
                   : '12'
           }
           onChange={handleDateRangeChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 bg-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 bg-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         >
           <option value="3">Last 3 months</option>
           <option value="6">Last 6 months</option>

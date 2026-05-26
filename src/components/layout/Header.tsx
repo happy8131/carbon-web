@@ -48,10 +48,10 @@ export default function Header({ onMenuClick }: HeaderProps) {
       <div className="flex items-center gap-4">
         {/* 필터 배지 */}
         <div className="hidden sm:flex items-center gap-2.5">
-          <div className="px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-lg text-xs font-medium text-blue-700">
+          <div className="px-3 py-1.5 bg-secondary-50 border border-secondary-200 rounded-lg text-xs font-medium text-secondary-700">
             {isAllSelected ? 'All Companies' : `${selectedCount} Company(ies)`}
           </div>
-          <div className="px-3 py-1.5 bg-emerald-50 border border-emerald-200 rounded-lg text-xs font-medium text-emerald-700">
+          <div className="px-3 py-1.5 bg-primary-50 border border-primary-200 rounded-lg text-xs font-medium text-primary-700">
             {dateRange.start} ~ {dateRange.end}
           </div>
         </div>

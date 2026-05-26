@@ -97,7 +97,7 @@ export default function EmissionChart({ filteredCompanies }: EmissionChartProps)
               stroke={COLORS[idx % COLORS.length]}
               strokeWidth={2}
               dot={false}
-              isAnimationActive={false}
+              animationDuration={800}
             />
           ))}
         </LineChart>

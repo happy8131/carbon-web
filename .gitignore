@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Build and dev logs
+build_output.txt
+build_result.log
+dev_server.log
+
+# Playwright test artifacts
+.playwright-mcp/

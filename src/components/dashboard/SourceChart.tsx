@@ -65,6 +65,7 @@ export default function SourceChart({ filteredCompanies }: SourceChartProps) {
             outerRadius={100}
             paddingAngle={2}
             dataKey="value"
+            animationDuration={800}
             label={({ name, percent }) =>
               `${name} ${((percent ?? 0) * 100).toFixed(1)}%`
             }

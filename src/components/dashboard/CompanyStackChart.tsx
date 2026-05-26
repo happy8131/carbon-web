@@ -98,7 +98,7 @@ export default function CompanyStackChart({ filteredCompanies }: CompanyStackCha
               stroke={COLORS[idx % COLORS.length]}
               fill={COLORS[idx % COLORS.length]}
               fillOpacity={0.7}
-              isAnimationActive={false}
+              animationDuration={800}
             />
           ))}
         </AreaChart>

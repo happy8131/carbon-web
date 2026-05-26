@@ -12,8 +12,8 @@ interface PostCardProps {
 
 export default function PostCard({ post, company, onDelete, isDeleting = false }: PostCardProps) {
   return (
-    <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
-      <div className="flex justify-between items-start mb-2">
+    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex justify-between items-start mb-3">
         <h3 className="font-semibold text-gray-900 flex-1 pr-2">{post.title}</h3>
         {onDelete && (
           <button
@@ -26,8 +26,8 @@ export default function PostCard({ post, company, onDelete, isDeleting = false }
           </button>
         )}
       </div>
-      <div className="flex gap-2 items-center mb-2">
-        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">{company.name}</span>
+      <div className="flex gap-2 items-center mb-3">
+        <span className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded">{company.name}</span>
         <span className="text-xs text-gray-500">{formatDate(post.dateTime)}</span>
       </div>
       <p className="text-sm text-gray-600 line-clamp-2">{post.content}</p>

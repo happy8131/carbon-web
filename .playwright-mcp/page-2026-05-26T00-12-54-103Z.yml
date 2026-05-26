@@ -1,0 +1,33 @@
+- generic [ref=e2]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - heading "🌍 CarbonTrack" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Carbon Management
+    - navigation [ref=e8]:
+      - link "Dashboard" [ref=e9] [cursor=pointer]:
+        - /url: /
+    - generic [ref=e10]:
+      - heading "Select Companies" [level=2] [ref=e11]
+      - generic [ref=e12]: 로딩 중...
+    - generic [ref=e13]:
+      - heading "Date Range" [level=2] [ref=e14]
+      - combobox [ref=e15]:
+        - option "Last 3 months"
+        - option "Last 6 months"
+        - option "Last 12 months" [selected]
+  - generic [ref=e16]:
+    - banner [ref=e17]:
+      - generic [ref=e18]:
+        - button "메뉴 토글" [ref=e19]:
+          - img
+        - heading "Carbon Emissions Dashboard" [level=1] [ref=e21]
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e24]: All Companies
+          - generic [ref=e25]: 2026-01 ~ 2026-12
+        - button "새로고침" [ref=e26]:
+          - img
+    - main [ref=e28]:
+      - generic [ref=e30]:
+        - heading "404" [level=1] [ref=e31]
+        - heading "This page could not be found." [level=2] [ref=e33]

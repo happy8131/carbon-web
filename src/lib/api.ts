@@ -6,7 +6,7 @@ const jitter = () => 200 + Math.random() * 600;
 const maybeFail = () => Math.random() < 0.15;
 
 // 테스트 데이터: 회사들
-const companies: Company[] = [
+const _companies: Company[] = [
   {
     id: 'c1',
     name: 'Acme Corp',
@@ -86,7 +86,7 @@ const companies: Company[] = [
 ];
 
 // 테스트 데이터: 포스트들
-const posts: Post[] = [
+let _posts: Post[] = [
   {
     id: 'p1',
     title: 'Acme Corp 분기별 탄소 감축 보고서',
@@ -148,13 +148,13 @@ const posts: Post[] = [
 // API 함수: 회사 목록 조회
 export async function fetchCompanies(): Promise<Company[]> {
   await delay(jitter());
-  return companies;
+  return [..._companies];
 }
 
 // API 함수: 포스트 목록 조회
 export async function fetchPosts(): Promise<Post[]> {
   await delay(jitter());
-  return posts;
+  return [..._posts];
 }
 
 // API 함수: 포스트 생성/수정
@@ -168,29 +168,26 @@ export async function createOrUpdatePost(
   }
 
   if (post.id) {
-    // 수정: 기존 포스트 업데이트
-    const index = posts.findIndex(p => p.id === post.id);
-    if (index !== -1) {
-      const updated: Post = {
-        id: post.id,
-        title: post.title,
-        resourceUid: post.resourceUid,
-        dateTime: post.dateTime,
-        content: post.content,
-      };
-      posts[index] = updated;
-      return updated;
-    }
+    // 수정: 기존 포스트 업데이트 (불변성 유지)
+    const updated: Post = {
+      id: post.id,
+      title: post.title,
+      resourceUid: post.resourceUid,
+      dateTime: post.dateTime,
+      content: post.content,
+    };
+    _posts = _posts.map(x => x.id === post.id ? updated : x);
+    return updated;
   }
 
-  // 생성: 새 포스트 추가
-  const newPost: Post = {
+  // 생성: 새 포스트 추가 (불변성 유지)
+  const created: Post = {
     id: `p${Date.now()}`,
     title: post.title,
     resourceUid: post.resourceUid,
     dateTime: post.dateTime,
     content: post.content,
   };
-  posts.push(newPost);
-  return newPost;
+  _posts = [..._posts, created];
+  return created;
 }
