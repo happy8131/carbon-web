@@ -64,7 +64,7 @@ export default function CompanyStackChart({ filteredCompanies }: CompanyStackCha
     <div className="bg-white p-6 rounded-lg border border-gray-200">
       <h2 className="text-lg font-bold text-gray-900 mb-4">회사별 배출량 추이</h2>
       <ResponsiveContainer width="100%" height={300}>
-        <AreaChart data={chartData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
+        <AreaChart data={chartData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }} animationDuration={800}>
           <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
           <XAxis
             dataKey="month"
@@ -98,7 +98,7 @@ export default function CompanyStackChart({ filteredCompanies }: CompanyStackCha
               stroke={COLORS[idx % COLORS.length]}
               fill={COLORS[idx % COLORS.length]}
               fillOpacity={0.7}
-              isAnimationActive={false}
+              animationDuration={800}
             />
           ))}
         </AreaChart>

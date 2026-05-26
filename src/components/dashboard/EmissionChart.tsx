@@ -64,7 +64,7 @@ export default function EmissionChart({ filteredCompanies }: EmissionChartProps)
     <div className="bg-white p-6 rounded-lg border border-gray-200">
       <h2 className="text-lg font-bold text-gray-900 mb-4">월별 탄소 배출량 추이</h2>
       <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={chartData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
+        <LineChart data={chartData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }} animationDuration={800}>
           <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
           <XAxis
             dataKey="month"
@@ -97,7 +97,7 @@ export default function EmissionChart({ filteredCompanies }: EmissionChartProps)
               stroke={COLORS[idx % COLORS.length]}
               strokeWidth={2}
               dot={false}
-              isAnimationActive={false}
+              animationDuration={800}
             />
           ))}
         </LineChart>
